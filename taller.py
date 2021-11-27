@@ -49,3 +49,16 @@ data.groupby('Recuperado').size()
 data['Ubicación del caso'].replace('fallecido','Fallecido',inplace=True)
 
 data[(data['Recuperado'] == 'Recuperado')].groupby('Recuperado').size()
+
+
+# 6. Número de personas que ha fallecido
+data.groupby('Estado').size()
+
+data[data['Estado'] == 'Fallecido'].groupby('Estado').size()
+
+
+
+
+
+
+
