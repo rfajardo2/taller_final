@@ -76,6 +76,16 @@ data.groupby('Nombre departamento').size()
 data.groupby('Nombre departamento').size().count()
 
 
+# 9. Liste los departamentos afectados(sin repetirlos)
+data['Nombre departamento'].unique().shape[0]
+
+
+
+
+
+
+
+
 
 
 
