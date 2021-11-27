@@ -63,6 +63,21 @@ data[(data['Tipo de contagio'] == 'Importado') |
      (data['Tipo de contagio'] == 'Relacionado')].groupby('Tipo de contagio').size().sort_values(ascending=True)
 
 
+# 8. Número de departamentos afectados
+data.columns
+data['Nombre departamento'].replace('Tolima','TOLIMA',inplace=True)
+data['Nombre departamento'].replace('BARRANQUILLA','ATLANTICO',inplace=True)
+data['Nombre departamento'].replace('Caldas','CALDAS',inplace=True)
+data['Nombre departamento'].replace('STA MARTA D.E.','MAGDALENA',inplace=True)
+data['Nombre departamento'].replace('CARTAGENA','BOLIVAR',inplace=True)
+data['Nombre departamento'].replace('BOGOTA','CUNDINAMARCA',inplace=True)
+data.groupby('Nombre departamento').size()
+
+data.groupby('Nombre departamento').size().count()
+
+
+
+
 
 
 
