@@ -95,8 +95,9 @@ data.groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
 data[(data['Estado'] == 'Fallecido')].groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
 
 
+# 13. Liste de mayor a menor los 10 departamentos con mas casos de recuperados
 
-
+data[(data['Recuperado'] == 'Recuperado')].groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
 
 
 
