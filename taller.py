@@ -108,5 +108,21 @@ data[(data['Recuperado'] == 'Recuperado')].groupby('Nombre departamento').size()
 data.groupby('Nombre municipio').size().sort_values(ascending=False).head(10)
 
 
+# 15. Liste de mayor a menor los 10 municipios con mas casos de fallecidos
+
+data[(data['Estado'] == 'Fallecido')].groupby('Nombre municipio').size().sort_values(ascending=False).head(10)
+
+
+# 16. Liste de mayor a menor los 10 municipios con mas casos de recuperados
+
+data[(data['Recuperado'] == 'Recuperado')].groupby('Nombre municipio').size().sort_values(ascending=False).head(10)
+
+
+
+
+
+
+
+
 
 
