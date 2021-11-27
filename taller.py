@@ -46,7 +46,7 @@ data[(data['Ubicación del caso'] == 'Casa')].groupby('Ubicación del caso').siz
 #5. Número de personas que se encuentran recuperados
 data.columns
 data.groupby('Recuperado').size()
-data['Ubicación del caso'].replace('fallecido','Fallecido',inplace=True)
+data['Recuperado'].replace('fallecido','Fallecido',inplace=True)
 
 data[(data['Recuperado'] == 'Recuperado')].groupby('Recuperado').size()
 
@@ -80,7 +80,9 @@ data.groupby('Nombre departamento').size().count()
 data['Nombre departamento'].unique().shape[0]
 
 
-
+# 10. Ordene de mayor a menor por tipo de atención
+data.columns
+data.groupby('Tipo de contagio').size().sort_values(ascending=True)
 
 
 
