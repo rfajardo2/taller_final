@@ -57,6 +57,17 @@ data.groupby('Estado').size()
 data[data['Estado'] == 'Fallecido'].groupby('Estado').size()
 
 
+# 7. Ordenar de Mayor a menor por tipo de caso (Importado, en estudio,Relacionado)
+data[(data['Tipo de contagio'] == 'Importado') | 
+     (data['Tipo de contagio'] == 'En estudio') | 
+     (data['Tipo de contagio'] == 'Relacionado')].groupby('Tipo de contagio').size().sort_values(ascending=True)
+
+
+
+
+
+
+
 
 
 
