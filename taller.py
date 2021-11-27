@@ -85,15 +85,14 @@ data.columns
 data.groupby('Tipo de contagio').size().sort_values(ascending=True)
 
 
-    # 11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
+# 11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
 data.groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
 
 
 
+# 12 Liste de mayor a menor los 10 departamentos con mas casos de fallecidos
 
-
-
-
+data[(data['Estado'] == 'Fallecido')].groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
 
 
 
