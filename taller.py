@@ -43,10 +43,9 @@ data['Ubicación del caso'].replace('CASA','Casa',inplace=True)
 data['Ubicación del caso'].replace('casa','Casa',inplace=True)
 data[(data['Ubicación del caso'] == 'Casa')].groupby('Ubicación del caso').size()
 
+#5. Número de personas que se encuentran recuperados
+data.columns
+data.groupby('Recuperado').size()
+data['Ubicación del caso'].replace('fallecido','Fallecido',inplace=True)
 
-
-
-
-
-
-
+data[(data['Recuperado'] == 'Recuperado')].groupby('Recuperado').size()
