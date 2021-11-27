@@ -37,11 +37,11 @@ data['Nombre municipio'].unique().shape[0]
 data['Nombre municipio'].unique().shape[0]
 
 
-
-
-
-
-
+# 4. Número de personas que se encuentran en atención en casa
+data.groupby('Ubicación del caso').size()
+data['Ubicación del caso'].replace('CASA','Casa',inplace=True)
+data['Ubicación del caso'].replace('casa','Casa',inplace=True)
+data[(data['Ubicación del caso'] == 'Casa')].groupby('Ubicación del caso').size()
 
 
 
