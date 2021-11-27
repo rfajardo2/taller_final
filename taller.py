@@ -31,7 +31,16 @@ data.Estado.replace('LEVE','Leve',inplace=True)
 data.shape[0]
 
 # 2. Número de Municipios Afectados
-data.groupby('Nombre departamento').unique().shape()
+data['Nombre municipio'].unique().shape[0]
+
+#3. Liste los municipios afectados (sin repetirlos)
+data['Nombre municipio'].unique().shape[0]
+
+
+
+
+
+
 
 
 
