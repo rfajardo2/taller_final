@@ -31,6 +31,8 @@ data.Estado.replace('LEVE','Leve',inplace=True)
 data.shape[0]
 
 # 2. Número de Municipios Afectados
+data['Nombre municipio'].replace('puerto COLOMBIA','PUERTO COLOMBIA',inplace=True)
+data['Nombre municipio'].replace('puerto colombia','PUERTO COLOMBIA',inplace=True)
 data['Nombre municipio'].unique().shape[0]
 
 #3. Liste los municipios afectados (sin repetirlos)
@@ -98,6 +100,12 @@ data[(data['Estado'] == 'Fallecido')].groupby('Nombre departamento').size().sort
 # 13. Liste de mayor a menor los 10 departamentos con mas casos de recuperados
 
 data[(data['Recuperado'] == 'Recuperado')].groupby('Nombre departamento').size().sort_values(ascending=False).head(10)
+
+
+
+# 14. Liste de mayor a menor los 10 municipios con mas casos de contagiados
+
+data.groupby('Nombre municipio').size().sort_values(ascending=False).head(10)
 
 
 
