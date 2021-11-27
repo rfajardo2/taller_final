@@ -6,7 +6,14 @@ Created on Fri Nov 26 19:53:48 2021
 """
 
 
+import pandas as pd
 
+url = 'covid_22_noviembre.csv'
+
+data = pd.read_csv(url)
+
+# tamaño del data set
+data.shape
 # columnas del data set
 data.columns
 
