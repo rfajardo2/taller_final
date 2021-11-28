@@ -182,6 +182,7 @@ data.groupby('Tipo de contagio').size().sort_values
 # 32. Haga un gráfico de barras por atención de toda Colombi
 data['Ubicación del caso'].value_counts().plot.bar()
 
+# 33. Haga un gráfico de barras por Sexo de toda Colombia
 data.Sexo.value_counts().plot.bar()
 
 
