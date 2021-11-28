@@ -185,7 +185,8 @@ data['Ubicación del caso'].value_counts().plot.bar()
 # 33. Haga un gráfico de barras por Sexo de toda Colombia
 data.Sexo.value_counts().plot.bar()
 
+# 34. Haga un gráfico de barras por tipo de toda Colombia
 
-
+data['Tipo de contagio'].value_counts().plot.bar()
 
 
