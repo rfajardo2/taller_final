@@ -190,3 +190,17 @@ data.Sexo.value_counts().plot.bar()
 data['Tipo de contagio'].value_counts().plot.bar()
 
 
+# 35. Haga un gráfico de barras del número de contagiados, recuperados y fallecidos por fecha de toda Colombia
+
+data.Recuperado.value_counts().plot.bar()
+
+
+
+
+
+
+
+
+
+
+
