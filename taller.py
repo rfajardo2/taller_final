@@ -84,7 +84,7 @@ data['Nombre departamento'].unique().shape[0]
 
 # 10. Ordene de mayor a menor por tipo de atención
 data.columns
-data.groupby('Tipo de contagio').size().sort_values(ascending=True)
+data.groupby('Ubicación del caso').size().sort_values(ascending=False)
 
 
 # 11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
@@ -167,9 +167,22 @@ data.groupby('Fecha de diagnóstico').size().sort_values(ascending=False)
 
 
 
+# 22. Diga cual es la tasa de mortalidad y recuperación que tiene toda Colombmia
 
 
 
+data.Estado.value_counts().plot
+
+
+data.Estado.value_counts().plot
+
+data.groupby('Ubicación del caso').size().plot.bar()
+data.groupby('Tipo de contagio').size().sort_values
+
+# 32. Haga un gráfico de barras por atención de toda Colombi
+data['Ubicación del caso'].value_counts().plot.bar()
+
+data.Sexo.value_counts().plot.bar()
 
 
 
