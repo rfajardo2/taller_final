@@ -118,10 +118,34 @@ data[(data['Estado'] == 'Fallecido')].groupby('Nombre municipio').size().sort_va
 data[(data['Recuperado'] == 'Recuperado')].groupby('Nombre municipio').size().sort_values(ascending=False).head(10)
 
 
+# 17. Liste agrupado por departamento y en orden de Mayor a menor las 
+# ciudades con mas casos de contagiados
+
+data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values(ascending=False)..head(10)
+prueba_D_N = data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values()
+prueba_D_N = data.groupby(['Nombre municipio']).size().sort_values(ascending=False)
+
+data.groupby(['Nombre departamento','Nombre municipio']).size().apply(lambda x: x.sort_values(["0"], ascending = False))
+data(['Nombre departamento','Nombre municipio'])
 
 
+ppp=data.groupby(['Nombre departamento','Nombre municipio']).agg({'Sexo':sum})
+
+prueba_D_N.columns
+prueba_D_N['0']
+
+prueba_D_N.groupby(['Nombre municipio']).size()
+data.value_counts().sort_values(ascending=False)
+
+prueba_D_N = data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values(ascending=False)
+prueba_D_N2 =prueba_D_N.groupby(['Nombre departamento','Nombre municipio']).size()
+prueba_D_N =data.groupby(['Nombre departamento'])
+prueba_D_N.columns()
 
 
+# 18. Número de Mujeres y hombres contagiados por ciudad por departamento
+
+data.groupby(['Nombre departamento','Nombre municipio','Sexo']).size()
 
 
 
