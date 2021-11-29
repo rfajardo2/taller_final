@@ -180,10 +180,27 @@ data.groupby('Ubicación del caso').size().plot.bar()
 data.groupby('Tipo de contagio').size().sort_values
 
 
+# 25
+data.groupby(['Nombre municipio','Ubicación del caso']).size()
+
+
+
+# 27 
+data.Recuperado.value_counts().plot()
+
+
+# 29. Grafique las curvas de contagio, muerte y recuperación de las 10 ciudades con mas casos de contagiados acumulados
+
+
+data.Recuperado.value_counts()
+data.groupby(['Nombre municipio','Recuperado']).size().head(10).plot()
+data.groupby(['Nombre municipio','Recuperado']).size().sort_values(ascending=False).head(10).plot()
+data.Recuperado.value_counts().plot.bar()
+
+
 # 30. Liste de mayor a menor la cantidad de fallecidos por edad en toda Colombia.
 
 data[(data['Estado'] == 'Fallecido')].groupby('Edad').size().sort_values(ascending=False)
-
 
 
 # 32. Haga un gráfico de barras por atención de toda Colombi
