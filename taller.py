@@ -179,6 +179,13 @@ data.Estado.value_counts().plot
 data.groupby('Ubicación del caso').size().plot.bar()
 data.groupby('Tipo de contagio').size().sort_values
 
+
+# 30. Liste de mayor a menor la cantidad de fallecidos por edad en toda Colombia.
+
+data[(data['Estado'] == 'Fallecido')].groupby('Edad').size().sort_values(ascending=False)
+
+
+
 # 32. Haga un gráfico de barras por atención de toda Colombi
 data['Ubicación del caso'].value_counts().plot.bar()
 
